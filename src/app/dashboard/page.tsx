@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <div className="[--header-height:calc(--spacing(14))]">
       <SidebarProvider className="flex flex-col">
-        <SiteHeader />
+        <SiteHeader name="Profile"/>
         <div className="flex flex-1">
           <AppSidebar />
           <SidebarInset>
