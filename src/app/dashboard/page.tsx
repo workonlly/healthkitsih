@@ -4,12 +4,10 @@ import {
   SidebarInset,
   SidebarProvider,
 } from "@/components/ui/sidebar"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 
 export const iframeHeight = "800px"
 
-export const description = "A sidebar with a header and a search form."
+export const description = "The user's Dashboard"
 
 export default function Page() {
   return (
