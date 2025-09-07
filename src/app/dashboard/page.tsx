@@ -38,7 +38,7 @@ export default function Page() {
                   </div>
                   <div className="w-max ">
                     <h1 className="text-lg mb-1">Height</h1>
-                    <h1 className="bg-[#262626] font-medium px-3 py-2 rounded-[15px]">6'</h1>
+                    <h1 className="bg-[#262626] font-medium px-3 py-2 rounded-[15px]">6&#39;</h1>
                   </div>
                   <div className="w-max ">
                     <h1 className="text-lg mb-1">Weight</h1>

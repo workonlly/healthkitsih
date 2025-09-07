@@ -34,7 +34,7 @@ const data = {
   navMain: [
     {
       title: "Profile",
-      url: "/dashboard/profile",
+      url: "/dashboard",
       icon: SquareTerminal,
       isActive: true,
     },
@@ -74,7 +74,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       className="top-(--header-height) h-[calc(100svh-var(--header-height))]!"
       {...props}
     >
-      <SidebarHeader>
+      <SidebarHeader >
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
