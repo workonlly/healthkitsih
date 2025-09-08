@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Background from "@/components/Background";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -16,10 +17,10 @@ export default function Home() {
         <div className="flex gap-2 w-full justify-center">
           <Button>Explore</Button>
           <Button variant="secondary">Get Started</Button>
-          
         </div>
       </div>
     </div>
+    <Footer/>
     </>
   );
 }
