@@ -1,16 +1,10 @@
-import { AppSidebar } from "@/components/app-sidebar"
 import { SiteHeader } from "@/components/site-header"
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/components/ui/sidebar"
 
 import {
   Table,
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -87,44 +81,37 @@ const medicalReports = [
 
 export default function Page() {
   return (
-    <div className="[--header-height:calc(--spacing(14))]">
-      <SidebarProvider className="flex flex-col">
-        <SiteHeader name="Medical Reports" />
-        <div className="flex flex-1">
-          <AppSidebar />
-          <SidebarInset>
-            <div className="flex flex-1 flex-col gap-4 p-4">
-                <div className="w-full h-max">
-                    <h1 className="mb-2">Medical Reports</h1>
-                    <hr />
-                </div>
-                <Table>
-                <TableCaption>A list of your recent Medical Reports.</TableCaption>
-                <TableHeader>
-                    <TableRow>
-                    <TableHead className="w-[100px]">Index</TableHead>
-                    <TableHead>Report</TableHead>
-                    <TableHead>Description</TableHead>
-                    <TableHead className="text-right">Issued At</TableHead>
-                    <TableHead className="text-right">Issued By</TableHead>
-                    </TableRow>
-                </TableHeader>
-                <TableBody>
-                    {medicalReports.map((medicalReport) => (
-                    <TableRow key={medicalReport.medicalReport}>
-                        <TableCell className="font-medium">{medicalReport.medicalReport}</TableCell>
-                        <TableCell>{medicalReport.Report}</TableCell>
-                        <TableCell>{medicalReport.Description}</TableCell>
-                        <TableCell className="text-right">{medicalReport.issuedAt}</TableCell>
-                        <TableCell className="text-right">{medicalReport.issuedAt}</TableCell>
-                    </TableRow>
-                    ))}
-                </TableBody>
-                </Table>
-            </div>
-          </SidebarInset>
-        </div>
-      </SidebarProvider>
-    </div>
+    <>
+    <div className="flex flex-1 flex-col gap-4 p-4">
+      <div className="w-full h-max">
+          <h1 className="mb-2">Medical Reports</h1>
+          <hr />
+      </div>
+      <Table>
+      <TableCaption>A list of your recent Medical Reports.</TableCaption>
+      <TableHeader>
+          <TableRow>
+          <TableHead className="w-[100px]">Index</TableHead>
+          <TableHead>Report</TableHead>
+          <TableHead>Description</TableHead>
+          <TableHead className="text-right">Issued At</TableHead>
+          <TableHead className="text-right">Issued By</TableHead>
+          </TableRow>
+      </TableHeader>
+      <TableBody>
+          {medicalReports.map((medicalReport) => (
+          <TableRow key={medicalReport.medicalReport}>
+              <TableCell className="font-medium">{medicalReport.medicalReport}</TableCell>
+              <TableCell>{medicalReport.Report}</TableCell>
+              <TableCell>{medicalReport.Description}</TableCell>
+              <TableCell className="text-right">{medicalReport.issuedAt}</TableCell>
+              <TableCell className="text-right">{medicalReport.issuedAt}</TableCell>
+          </TableRow>
+          ))}
+      </TableBody>
+      </Table>
+    </div>   
+    </>
+
   )
 }

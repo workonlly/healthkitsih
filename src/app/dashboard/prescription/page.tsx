@@ -69,44 +69,34 @@ const prescriptions = [
 
 export default function Page() {
   return (
-    <div className="[--header-height:calc(--spacing(14))]">
-      <SidebarProvider className="flex flex-col">
-        <SiteHeader name="Prescription" />
-        <div className="flex flex-1">
-          <AppSidebar />
-          <SidebarInset>
-            <div className="flex flex-1 flex-col gap-4 p-4">
-                <div className="w-full h-max">
-                    <h1 className="mb-2">Prescriptions</h1>
-                    <hr />
-                </div>
-                <Table>
-                <TableCaption>A list of your recent Prescriptions.</TableCaption>
-                <TableHeader>
-                    <TableRow>
-                    <TableHead className="w-[100px]">Index</TableHead>
-                    <TableHead>Pills</TableHead>
-                    <TableHead>Description</TableHead>
-                    <TableHead className="text-right">Time Interval</TableHead>
-                    <TableHead className="text-right">Dose per Day</TableHead>
-                    </TableRow>
-                </TableHeader>
-                <TableBody>
-                    {prescriptions.map((prescription) => (
-                    <TableRow key={prescription.prescription}>
-                        <TableCell className="font-medium">{prescription.prescription}</TableCell>
-                        <TableCell>{prescription.pill}</TableCell>
-                        <TableCell>{prescription.Description}</TableCell>
-                        <TableCell className="text-right">{prescription.timeInterval}</TableCell>
-                        <TableCell className="text-right">{prescription.timeInterval}</TableCell>
-                    </TableRow>
-                    ))}
-                </TableBody>
-                </Table>
-            </div>
-          </SidebarInset>
-        </div>
-      </SidebarProvider>
+    <div className="flex flex-1 flex-col gap-4 p-4">
+      <div className="w-full h-max">
+          <h1 className="mb-2">Prescriptions</h1>
+          <hr />
+      </div>
+      <Table>
+      <TableCaption>A list of your recent Prescriptions.</TableCaption>
+      <TableHeader>
+          <TableRow>
+          <TableHead className="w-[100px]">Index</TableHead>
+          <TableHead>Pills</TableHead>
+          <TableHead>Description</TableHead>
+          <TableHead className="text-right">Time Interval</TableHead>
+          <TableHead className="text-right">Dose per Day</TableHead>
+          </TableRow>
+      </TableHeader>
+      <TableBody>
+          {prescriptions.map((prescription) => (
+          <TableRow key={prescription.prescription}>
+              <TableCell className="font-medium">{prescription.prescription}</TableCell>
+              <TableCell>{prescription.pill}</TableCell>
+              <TableCell>{prescription.Description}</TableCell>
+              <TableCell className="text-right">{prescription.timeInterval}</TableCell>
+              <TableCell className="text-right">{prescription.timeInterval}</TableCell>
+          </TableRow>
+          ))}
+      </TableBody>
+      </Table>
     </div>
   )
 }

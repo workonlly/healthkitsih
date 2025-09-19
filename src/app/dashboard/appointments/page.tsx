@@ -76,44 +76,34 @@ const appointments = [
 
 export default function Page() {
   return (
-    <div className="[--header-height:calc(--spacing(14))]">
-      <SidebarProvider className="flex flex-col">
-        <SiteHeader name="Appointments"/>
-        <div className="flex flex-1">
-          <AppSidebar />
-          <SidebarInset>
-            <div className="flex flex-1 flex-col gap-4 p-4">
-                <div className="w-full h-max">
-                    <h1 className="mb-2">Appointments</h1>
-                    <hr />
-                </div>
-                <Table>
-                <TableCaption>Your upcoming Appointments.</TableCaption>
-                <TableHeader>
-                    <TableRow>
-                    <TableHead className="w-[100px]">Index</TableHead>
-                    <TableHead>Doctor</TableHead>
-                    <TableHead>Description</TableHead>
-                    <TableHead className="text-right">Time</TableHead>
-                    <TableHead className="text-right">Status</TableHead>
-                    </TableRow>
-                </TableHeader>
-                <TableBody>
-                    {appointments.map((appointment) => (
-                    <TableRow key={appointment.appointment}>
-                        <TableCell className="font-medium">{appointment.appointment}</TableCell>
-                        <TableCell>{appointment.doctor}</TableCell>
-                        <TableCell>{appointment.description}</TableCell>
-                        <TableCell className="text-right">{appointment.time}</TableCell>
-                        <TableCell className="text-right">{appointment.status}</TableCell>
-                    </TableRow>
-                    ))}
-                </TableBody>
-                </Table>
-            </div>
-          </SidebarInset>
-        </div>
-      </SidebarProvider>
+    <div className="flex flex-1 flex-col gap-4 p-4">
+      <div className="w-full h-max">
+          <h1 className="mb-2">Appointments</h1>
+          <hr />
+      </div>
+      <Table>
+      <TableCaption>Your upcoming Appointments.</TableCaption>
+      <TableHeader>
+          <TableRow>
+          <TableHead className="w-[100px]">Index</TableHead>
+          <TableHead>Doctor</TableHead>
+          <TableHead>Description</TableHead>
+          <TableHead className="text-right">Time</TableHead>
+          <TableHead className="text-right">Status</TableHead>
+          </TableRow>
+      </TableHeader>
+      <TableBody>
+          {appointments.map((appointment) => (
+          <TableRow key={appointment.appointment}>
+              <TableCell className="font-medium">{appointment.appointment}</TableCell>
+              <TableCell>{appointment.doctor}</TableCell>
+              <TableCell>{appointment.description}</TableCell>
+              <TableCell className="text-right">{appointment.time}</TableCell>
+              <TableCell className="text-right">{appointment.status}</TableCell>
+          </TableRow>
+          ))}
+      </TableBody>
+      </Table>
     </div>
   )
 }
