@@ -1,5 +1,3 @@
-import { SiteHeader } from "@/components/site-header"
-
 import {
   Table,
   TableBody,
