@@ -27,14 +27,14 @@ import Link from "next/link"
 
 const data = {
   user: {
-    name: "Anurag",
-    email: "anurag@gmail.com",
+    name: "Sitanshu Nayan",
+    email: "hello@gmail.com",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
     {
       title: "Profile",
-      url: "/dashboard",
+      url: "/dashboard/profile",
       icon: SquareTerminal,
       isActive: true,
     },
@@ -49,8 +49,8 @@ const data = {
       icon: BookOpen,
     },
     {
-      title: "Medical Reports",
-      url: "/dashboard/medicalreports",
+      title: "Reports",
+      url: "/dashboard/reports",
       icon: Settings2,
     },
   ],

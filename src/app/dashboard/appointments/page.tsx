@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Table,
   TableBody,
@@ -7,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { useParams, usePathname } from "next/navigation";
 
 
 export const iframeHeight = "800px"
@@ -67,6 +70,9 @@ const appointments = [
 
 
 export default function Page() {
+  const routes = usePathname().split("/")[2];
+  console.log("routes",routes);
+
   return (
     <div className="flex flex-1 flex-col gap-4 p-4">
       <div className="w-full h-max">
